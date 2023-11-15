@@ -1,0 +1,34 @@
+"""
+Use Test Driven Development to slowly but surely develop the following function:
+next_primes(start, number_of_primes)
+Returns: The first prime greater than 'start', plus subsequent primes,
+    for a total of number_of_primes primes
+
+Note: pretend you're lazy. Write the absolute minimum code-under-test to pass each test
+"""
+
+# Todo: Create 'maths_functions.py' and 'test_maths_functions.py' - two empty modules
+
+# Todo: Create a test: next_primes returns a list of integers
+
+# Todo: Create the next_primes function, which always returns [1, 2, 3]
+
+# Todo: Create a test: next_primes returns a list of number_of_primes integers
+
+# Todo: Update next_primes so it returns [1] * number_of_primes
+
+# Todo: Create a test: All numbers returned by next_primes are > start
+
+# Todo: Update next_primes so it passes the test
+
+# Todo: Create a test: All numbers returned by next_primes are primes
+
+# Todo: Update next_primes so it passes the test
+
+# Todo: Create a test: All numbers returned by next_primes are different
+
+# Todo: Update next_primes so it passes the test
+
+# Todo: Create a test: Test next_primes with known return values, e.g. (3, 3) -> (5, 7, 11)
+
+# Todo: Update next primes so it actually generates the right numbers

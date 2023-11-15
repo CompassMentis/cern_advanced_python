@@ -1,0 +1,17 @@
+pillow
+aiofiles
+freezegun
+pydantic
+pytest
+snakeviz
+coverage
+pytest-cov
+black
+mypy
+sphynx
+flake8
+pylint
+build
+setuptools
+twine
+memray
