@@ -15,3 +15,4 @@ build
 setuptools
 twine
 memray
+requests
