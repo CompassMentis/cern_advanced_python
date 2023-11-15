@@ -1,0 +1,20 @@
+The K-nearest neighbour code from Chapter 9's exercise is both CPU and I/O bound
+
+Try to speed up the CPU-heavy parts of it as follows:
+1. Start with your final solution or the 'official' solution
+
+2. The code calculates the average point for each group. This could be done concurrently - for all groups at once
+- Create a function which calculates the average point for a group of points
+- Create a ProcessPoolExecutor, use .map to run the new function on all groups of points concurrently
+- Run the code, make sure the resulting picture is still correct
+- ... and write down the new time
+
+3. The code calculates the nearest centre point for each point. This could also be done concurrently
+- Create a ProcessPoolExecutor, use .map to do this for all points concurrently
+- Run the code, make sure the resulting picture is still correct
+- ... and write down the new time
+
+4. For each iteration the code currently creates two ProcessPoolExecutors
+- Instead, create a single one once and use it in every iteration
+- Run the code, make sure the resulting picture is still correct
+- ... and write down the new time
