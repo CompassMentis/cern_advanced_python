@@ -1,13 +1,13 @@
 import pathlib
 import time
 import timeit
+import asyncio
 
 
-def get_value_from_api(id):
+async def get_value_from_api(id):
     lines = pathlib.Path('../data/api_data.txt').read_text().split('\n')
-    time.sleep(0.02)
+    await asyncio.sleep(0.02)
     return int(lines[id])
-
 
 # TODO: Run the code and write down the output, including the duration from timeit
 
@@ -23,15 +23,15 @@ def get_value_from_api(id):
 
 # TODO: Compare the new time against the old time
 
-def main():
-    total = 0
-    for i in range(100):
-        value = get_value_from_api(i)
-        total += value
+
+async def main():
+    tasks = [asyncio.Task(get_value_from_api(id)) for id in range(100)]
+    results = await asyncio.gather(*tasks)
+    total = sum(results)
     print(total)
 
 
-print(timeit.timeit('main()', number=1, globals=locals()))
+print(timeit.timeit('asyncio.run(main())', number=1, globals=locals()))
 
 # Expected output:
 # 53098958
