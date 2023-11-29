@@ -1,5 +1,5 @@
 # Run with
-# pytest --cov=pytest_missing_coverage pytest_missing_coverage.py --cov-report=html
+# pytest --cov --cov-report=html pytest_missing_coverage.py
 import pytest
 
 

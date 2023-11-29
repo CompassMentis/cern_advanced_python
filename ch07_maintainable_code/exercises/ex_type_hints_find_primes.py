@@ -1,5 +1,5 @@
 # TODO: Use mypy to check this, using
-#  mypy ex_type_hints_find_primes --strict
+#  mypy ex_type_hints_find_primes.py --strict
 
 # TODO: Add type hints until mypy no longer reports any errors
 

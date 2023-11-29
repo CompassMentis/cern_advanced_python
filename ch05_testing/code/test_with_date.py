@@ -3,12 +3,12 @@ import datetime
 import freezegun
 
 
-@freezegun.freeze_time(datetime.date(2023, 5, 21))
 def tomorrow():
     today = datetime.date.today()
     return today + datetime.timedelta(days=1)
 
 
+@freezegun.freeze_time(datetime.date(2023, 5, 21))
 def test_tomorrow():
     assert tomorrow() == datetime.date(2023, 5, 22)
 

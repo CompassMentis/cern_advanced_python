@@ -3,23 +3,17 @@ import timeit
 number_of_numbers = 100_000
 
 
-def version5():
-    return ''.join(
-        str(i) for i in range(number_of_numbers)
-    )
+def version1():
+    result = ''
+    for i in range(number_of_numbers):
+        result += str(i)
+    return result
 
 
 def version2():
     numbers = list(range(number_of_numbers))
     numbers_as_strings = [str(i) for i in numbers]
     result = ''.join(numbers_as_strings)
-    return result
-
-
-def version1():
-    result = ''
-    for i in range(number_of_numbers):
-        result += str(i)
     return result
 
 
@@ -53,7 +47,16 @@ def version4():
     return result
 
 
-for function_name in ('version1', 'version2', 'version3', 'version4', 'version5'):
+def version5():
+    return ''.join(
+        str(i) for i in range(number_of_numbers)
+    )
+
+
+for function_name in (
+    'version1', 'version2', 'version3',
+    'version3a', 'version4', 'version5'
+):
     print(
         function_name,
         timeit.timeit(

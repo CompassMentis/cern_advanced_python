@@ -5,3 +5,7 @@
 utilities
 .mypy_cache
 .pytest_cache
+htmlcov
+.coverage
+.pytest_cache
+*.log
