@@ -1,13 +1,17 @@
-class Combine:
-    def __init__(self, list_a, list_b):
-        self.list_a = list_a
-        self.list_b = list_b
+import random
+
+
+class InfiniteDiceRoll:
+    def __init__(self):
+        self._rolls = {}
 
     def __getitem__(self, item):
-        return self.list_a[item] + self.list_b[item]
+        if item not in self._rolls:
+            self._rolls[item] = random.randint(1, 6)
+        return self._rolls[item]
 
 
-all_ones = [1, 1, 1, 1, 1]
-numbers = [2, 3, 5, 8, 9]
-combined = Combine(all_ones, numbers)
-print(combined[2])   # 1 + 5 = 6
+rolls = InfiniteDiceRoll()
+
+for number in [1, 5, 10, 1_000_000, 10, 1_000_000]:
+    print(number, rolls[number])
