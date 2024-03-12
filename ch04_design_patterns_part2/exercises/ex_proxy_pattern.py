@@ -8,14 +8,6 @@ import people
 #   This class should have (or delegate to) the same methods, but with correct names
 #   Do not copy the code from people.Person
 
-class Person(people.Person):
-    def __init__(self, name, city):
-        super().__init__(name, city)
-
-    @property
-    def name_in_caps(self):
-        return self.nameInCaps
-
 # Todo: Run the following code and make sure it works
 sam = Person(name='sam smith', city='New Delhi')
 print(sam.name_in_caps)

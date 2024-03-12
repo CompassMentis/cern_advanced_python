@@ -8,15 +8,15 @@
 # Done: Run the code and make sure it still gives the expected output
 
 # Part 2 - Proxy Pattern
-# Todo: Create LoggingVector, as proxy for the Vector class
+# Done: Create LoggingVector, as proxy for the Vector class
 #   It must have the same signature (method headers) as the Vector class
 #   Print out each method call. For instance: "__init__(2, 7)"
 #   But make the Vector class' methods do the real work
 #   hint: use super(). to access them
 
-# Todo: Change the vector_factory function so it returns LoggingVector instances instead
+# Done: Change the vector_factory function so it returns LoggingVector instances instead
 
-# Todo: Run the code, check that you get the original output plus the logged output
+# Done: Run the code, check that you get the original output plus the logged output
 
 class Vector:
     def __init__(self, x, y):

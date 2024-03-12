@@ -7,7 +7,7 @@ class Person:
 
     @property
     def lives_in_capital_city(self):
-        return self.Name in ['New Delhi', 'Amsterdam', 'London', 'Paris']
+        return self.City in ['New Delhi', 'Amsterdam', 'London', 'Paris']
 
     @property
     def nameInCaps(self):

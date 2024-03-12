@@ -1,10 +1,13 @@
-# Todo: The __init__ method creates a _age attribute and sets it to None
+# Todo: Change it so the __init__ method creates a _age attribute and sets it to None
 
 # Todo: Create an age property getter which returns _age
 
 # Todo: Create an age property setter which rounds the age down to the nearest integer
 #   and then stores it in _age
 
+# Todo: Run the code.
+#  You may get 'None' as the (first) age
+#  If so, carefully think through the order of the steps in __init__
 
 class Person:
     def __init__(self, name, age):

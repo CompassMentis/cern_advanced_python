@@ -4,9 +4,11 @@ class ImmutableClass(type):
         new_cls = super().__new__(cls, name, bases, dct)
 
         def new_set_attr(self, name, new_value):
-            raise TypeError(
-                f"Cannot set attribute '{name}' of class {self.__class__.__name__}"
-            )
+            if name in self.__dict__:
+                raise TypeError(
+                    f"Cannot set attribute '{name}' of class {self.__class__.__name__}"
+                )
+            self.__dict__[name] = new_value
 
         new_cls.__setattr__ = new_set_attr
 
