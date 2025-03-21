@@ -84,7 +84,7 @@ def main():
         for point in points:
             new_image.putpixel((point.x, point.y), GROUP_COLOURS[point.group])
         images.append(new_image)
-    images[0].save(TARGET_FILE, save_all=True, append_images=images[1:], duration=1000)
+    images[-1].save(TARGET_FILE, save_all=True, append_images=images[1:], duration=1000)
 
 
 if __name__ == '__main__':

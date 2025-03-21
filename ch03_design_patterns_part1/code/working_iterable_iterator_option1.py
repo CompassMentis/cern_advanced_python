@@ -27,15 +27,3 @@ three_random_numbers = RandomNumbers(3)
 for a in three_random_numbers:
     for b in three_random_numbers:
         print(a, b)
-
-# Output:
-# Numbers generated [34, 46, 58]
-# 34 34
-# 34 46
-# 34 58
-# 46 34
-# 46 46
-# 46 58
-# 58 34
-# 58 46
-# 58 58

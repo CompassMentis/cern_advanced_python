@@ -1,23 +1,22 @@
-class Person:
-    def __init__(self, name):
-        self.__dict__['_name'] = name
+class Demo:
+    def __init__(self):
+        self.some_public_value = 5
+        self._some_private_ish_value = 6
+        self.__more_private_value = 7
 
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, new_value):
-        self._name = new_value
-
-    def __setattr__(self, key, new_value):
-        if key.startswith('_'):
-            raise NotImplementedError
-        self.__dict__['_name'] = new_value
+    def change_values(self):
+        self.some_public_value += 1
+        self._some_private_ish_value += 1
+        self.__more_private_value += 1
 
 
-person = Person('Alex')
-person.name = 'Alexandra'
-print(person.name)  # Alexandra
-person._name = 'Alex'  # NotImplemented
+demo = Demo()
+demo.change_values()
+print(demo.some_public_value)  # 6
+print(demo._some_private_ish_value)  # 7
+print(demo._Demo__more_private_value)  # 9
 
+
+print(demo.__more_private_value)
+# AttributeError: 'Demo' object has no attribute '__more_private_value'.
+# Did you mean: '_Demo__more_private_value'?

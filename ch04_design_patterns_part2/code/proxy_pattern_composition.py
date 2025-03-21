@@ -1,39 +1,33 @@
-import pathlib
+class Calculator:
+    def add(self, a, b):
+        print('add called:', end=' ')
+        return a + b
 
-from PIL import Image
-from PIL import ImageShow
-
-# Show output using ImageMagick display command
-# Remove to use your system's default image viewer
-ImageShow.register(ImageShow.DisplayViewer(), 0)
-
-
-def load_and_scale_image(path):
-    image = Image.open(path)
-    scale = min(256 / image.width, 256 / image.height)
-    return image.resize((int(scale * image.width), int(scale * image.height)))
+    def sub(self, a, b):
+        print('sub called:', end=' ')
+        return a - b
 
 
-class ThumbnailImage:
-    def __init__(self, path):
-        self.image = load_and_scale_image(path)
+class CachedCalculator:
+    def __init__(self):
+        self.cache = {}
+        self.calculator = Calculator()
 
-    def show(self):
-        self.image.show()
+    def add_caching(self, func, a, b):
+        key = func.__name__, a, b
+        if key not in self.cache:
+            self.cache[key] = func(a, b)
+        return self.cache[key]
 
+    def add(self, a, b):
+        return self.add_caching(self.calculator.add, a, b)
 
-class BlackAndWhiteThumbnailImage:
-    def __init__(self, path):
-        self._thumbnail_image = ThumbnailImage(path)
-
-    @property
-    def image(self):
-        return self._thumbnail_image.image
-
-    def show(self):
-        self._thumbnail_image.image.convert('L').show()
+    def sub(self, a, b):
+        return self.add_caching(self.calculator.sub, a, b)
 
 
-image_path = pathlib.Path.cwd() / 'images' / 'image11.png'
-thumbnail = BlackAndWhiteThumbnailImage(image_path)
-thumbnail.show()
+calculator = CachedCalculator()
+print(calculator.add(5, 10))
+print(calculator.add(5, 10))
+print(calculator.sub(5, 10))
+print(calculator.cache)

@@ -9,7 +9,7 @@ from PIL import ImageShow
 ImageShow.register(ImageShow.DisplayViewer(), 0)
 
 
-class Image:
+class Thumbnail:
     def __init__(self, name):
         self.name = name
         self._image = None
@@ -31,10 +31,10 @@ class Image:
         self.image.show(title='eog')
 
 
-images = [
-    Image(f'images/image{i:02}.png')
+thumbnails = [
+    Thumbnail(f'images/image{i:02}.png')
     for i in range(1, 11)
 ]
 
 for _ in range(2):
-    random.choice(images).show()
+    random.choice(thumbnails).show()

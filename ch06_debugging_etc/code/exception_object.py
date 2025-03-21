@@ -1,11 +1,11 @@
 try:
     int('five')
-except Exception as e:
-    print(e)
+except Exception as exception:
+    print(exception)
     # invalid literal for int() with base 10: 'five'
 
-    print(e.args)
+    print(exception.args)
     # ("invalid literal for int() with base 10: 'five'",)
 
-    print(repr(e))
+    print(repr(exception))
     # ValueError("invalid literal for int() with base 10: 'five'")

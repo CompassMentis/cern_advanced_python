@@ -14,5 +14,6 @@ pylint
 build
 setuptools
 twine
-memray
 requests
+numba
+memory-profiler

@@ -8,9 +8,9 @@ except ValueError:
     print('Some ValueError')
 except IndexError:
     print('An IndexError')
-except Exception as e:
-    print('Another exception:', repr(e))
-    print('With args:', e.args)
+except Exception as exception:
+    print('Another exception:', repr(exception))
+    print('With args:', exception.args)
 else:
     print('All fine, no exception')
 finally:

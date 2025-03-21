@@ -13,11 +13,11 @@ class CanFly:
         print(f'{self.name} flies')
 
 
-class Bird(Animal, CanFly):
+class Bird(CanFly, Animal):
     ...
 
 
-class FlyingFish(Animal, CanFly, CanSwim):
+class FlyingFish(CanFly, CanSwim, Animal):
     ...
 
 

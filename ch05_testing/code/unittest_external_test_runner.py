@@ -15,11 +15,11 @@ def get_median(numbers):
 class Test(unittest.TestCase):
     def test_odd_number_sorted(self):
         numbers = [5, 10, 15, 20, 25]
-        self.assertEquals(get_median(numbers), 15)
+        self.assertEqual(get_median(numbers), 15)
 
     def test_even_number_sorted(self):
         numbers = [1, 2, 3, 4, 5, 6]
-        self.assertEquals(get_median(numbers), 3.5)
+        self.assertEqual(get_median(numbers), 3.5)
 
 
 # Output:

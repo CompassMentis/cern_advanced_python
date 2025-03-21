@@ -28,7 +28,7 @@ def version3():
 
 ### (column break)
 
-def version3a():
+def version4():
     numbers = []
     i = 0
     while i < number_of_numbers:
@@ -38,7 +38,7 @@ def version3a():
     return result
 
 
-def version4():
+def version5():
     def add_number(result_so_far, number):
         return result_so_far + str(number)
     result = ''
@@ -47,7 +47,7 @@ def version4():
     return result
 
 
-def version5():
+def version6():
     return ''.join(
         str(i) for i in range(number_of_numbers)
     )
@@ -55,7 +55,7 @@ def version5():
 
 for function_name in (
     'version1', 'version2', 'version3',
-    'version3a', 'version4', 'version5'
+    'version4', 'version5', 'version6'
 ):
     print(
         function_name,
