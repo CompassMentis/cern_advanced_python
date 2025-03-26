@@ -18,7 +18,7 @@ class Thumbnail:
     def load_picture_slowly(name):
         time.sleep(3)
         image = pil_image.open(name)
-        image.load()
+        image.thumbnail(size=(200, 200))
         return image
 
     @property
@@ -36,5 +36,6 @@ thumbnails = [
     for i in range(1, 11)
 ]
 
+print("10 images 'created'")
 for _ in range(2):
     random.choice(thumbnails).show()
