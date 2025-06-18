@@ -26,10 +26,10 @@ print(vector_factory())
 # Vector(x=5, y=10)
 
 print(vector_factory(1, 7))
-# Vector(x=50, y=98)  Note: you may get a different value
+# Vector(x=1, y=7)
 
 print(vector_factory(is_random=True))
-# Vector(x=1, y=7)
+# Vector(x=50, y=98)  Note: you may get a different value
 
 print(vector_factory(x=5, is_random=True))
 # Raises an AssertionError

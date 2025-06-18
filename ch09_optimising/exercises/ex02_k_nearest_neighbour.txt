@@ -1,0 +1,16 @@
+You may want to start with ex01 - this exercise is based on more complex code
+
+Optimise k_nearest_neighbour.py, as follows:
+
+- Run the code
+- View the image which this created, ../data/data_points_grouped.gif
+- Read through the code, try to understand it
+- Use timeit to time the code. Run the code 10 times. Print out the average time and make a note of it
+- Rename or copy the created image, so you can use it as a rough check that the code still works by comparing it against the new result
+- Optimise the code:
+    - Run it with a profiler
+    - Look at the profiler output and the code, pick something which looks promising
+    - Make some (suspected) improvement
+    - Compare the new time against the previous time
+    - (optional) Write down what you changed and how the time changed
+    - Repeat

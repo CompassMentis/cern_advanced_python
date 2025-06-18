@@ -3,21 +3,21 @@ class Animal:
         self.name = name
 
 
-class CanSwim:
+class SwimMixin:
     def swim(self):
         print(f'{self.name} swims')
 
 
-class CanFly:
+class FlyMixin:
     def fly(self):
         print(f'{self.name} flies')
 
 
-class Bird(CanFly, Animal):
+class Bird(FlyMixin, Animal):
     ...
 
 
-class FlyingFish(CanFly, CanSwim, Animal):
+class FlyingFish(FlyMixin, SwimMixin, Animal):
     ...
 
 

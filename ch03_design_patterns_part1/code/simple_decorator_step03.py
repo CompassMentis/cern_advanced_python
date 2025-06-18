@@ -13,11 +13,11 @@ def add_timing(function):
 
 @add_timing
 def slow_sum(a, b):
-    sum = a
+    result = a
     while b > 0:
         b -= 10 ** -6
-        sum += 10 ** -6
-    return sum
+        result += 10 ** -6
+    return result
 
 
 print(f'{slow_sum(15, 20) = }')

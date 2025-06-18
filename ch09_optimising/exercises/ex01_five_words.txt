@@ -1,0 +1,42 @@
+Compared to ex02, the code to optimise is simpler
+This probably makes using a profiler less useful,
+although I recommend you still use it, if only to get experience with it
+
+However, compared to ex02, this code can be optimised much more
+
+Note: This exercise is inspired by a couple of videos by Matt Parker
+Challenge and initial code - https://www.youtube.com/watch?v=_-AfhLQfb6w
+Discussing faster code - https://www.youtube.com/watch?v=c33AZBnRHks
+
+The exercise: Optimise five_words.py for speed
+
+It uses a large list of English words to find 5 words which between them have 25 unique characters
+
+You will need to download this list first. See the start of the code for instructions
+
+Running the starting version of the code,
+limiting the list to the first 1000 words (out of roughly 370,000) takes over 25 seconds.
+And the time goes up faster than the number of words.
+In short, running the code over the full word list will take hours, days or longer
+
+To limit the list of words, in word_list.py change WORDS_TO_CHECK.
+Or set it to a really large number to process all the words
+
+In the data folder is already a short word list, words_alpha_short.txt.
+You can use it to check that you haven't broken the code, i.e. that you still find a correct set of words.
+
+Do not change word_list.py
+Do not change the downloaded list of words, words_alpha.txt
+
+- Run the code
+- Read through the code, try to understand it
+- Use timeit to time the code.
+    - Set timeit's "number" to 1, so it only runs the code once
+    - If/when your code gets fast enough, set "number" higher for more accurate timings
+- Optimise the code:
+    - Run it with a profiler
+    - Look at the profiler output and the code, pick something which looks promising
+    - Make some (suspected) improvement
+    - Compare the new time against the previous time
+    - (optional) Write down what you changed and how the time changed
+    - Repeat
